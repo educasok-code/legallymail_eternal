@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://legallymail.com/eternal-recovery-kit.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegallyMail ETERNAL - Kit de Recuperación Autónomo</title>
+    <script type="module" src="./LegallyMail ETERNAL - Kit de Recuperación Autónomo_files/bridge.js.descarga" data-packs="c2pa,mcp-server-client"></script><style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .info-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .info-box p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            font-family: 'Courier New', monospace;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e8f5e9;
+            border-radius: 8px;
+            border-left: 4px solid #4caf50;
+            display: none;
+        }
+
+        .result.error {
+            background: #ffebee;
+            border-left-color: #f44336;
+        }
+
+        .result h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+        }
+
+        .result.error h3 {
+            color: #c62828;
+        }
+
+        .file-info {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            border: 1px solid #ddd;
+        }
+
+        .file-info p {
+            margin: 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .file-info strong {
+            color: #667eea;
+        }
+
+        .download-btn {
+            background: #4caf50;
+            margin-top: 15px;
+        }
+
+        .download-btn:hover {
+            background: #45a049;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .warning strong {
+            color: #856404;
+        }
+
+        .steps {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding-left: 50px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body data-testim-main-word-scripts-loaded="true">
+    <div class="container">
+        <div class="header">
+            <h1>🔓 Kit de Recuperación</h1>
+            <p>Recupera tus archivos de la blockchain sin depender de LegallyMail</p>
+        </div>
+
+        <div class="content">
+            <div class="info-box">
+                <h3>🛡️ Garantía de Acceso Perpetuo</h3>
+                <p>
+                    Este kit te permite recuperar tus archivos almacenados en la blockchain IPFS
+                    incluso si LegallyMail deja de existir. Solo necesitas tu <strong>clave de cifrado</strong>
+                    y los <strong>identificadores IPFS (CID)</strong> de tus archivos.
+                </p>
+            </div>
+
+            <div class="warning">
+                <strong>⚠️ Importante:</strong> Guarda tu clave de cifrado en un lugar seguro.
+                Sin ella, los archivos en IPFS permanecerán cifrados e inaccesibles para siempre.
+            </div>
+
+            <div class="form-group">
+                <label for="ipfsHashes">🔗 Identificadores IPFS (CIDs)</label>
+                <textarea id="ipfsHashes" placeholder="Pega uno o varios CIDs (uno por línea)
+Ej:
+QmXoypiz...
+QmYabcd..." autocomplete="off" style="min-height: 120px;"></textarea>
+                <small style="color: #666; display: block; margin-top: 5px;">
+                    Puedes ingresar varios identificadores, uno por línea.
+                </small>
+            </div>
+
+            <div class="form-group">
+                <label for="encryptionKey">🔑 Clave de Cifrado (Base64)</label>
+                <textarea id="encryptionKey" placeholder="Ej: a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6==" autocomplete="off" style="min-height: 80px;"></textarea>
+                <small style="color: #666; display: block; margin-top: 5px;">
+                    Esta clave se proporcionó al momento de la compra. Es una cadena en formato Base64.
+                </small>
+            </div>
+
+            <button class="btn" id="recoverBtn" onclick="recoverAllFiles()">
+                🚀 Recuperar Archivo(s)
+            </button>
+
+            <div class="spinner" id="spinner"></div>
+
+            <div id="resultsContainer"></div>
+
+            <hr style="margin: 40px 0; border: none; border-top: 2px solid #f0f0f0;">
+
+            <div class="info-box">
+                <h3>📖 Cómo funciona</h3>
+                <ol class="steps">
+                    <li>Ingresa el <strong>CID de IPFS</strong> del archivo que deseas recuperar</li>
+                    <li>Ingresa tu <strong>clave de cifrado</strong> personal</li>
+                    <li>El archivo se descarga desde múltiples gateways IPFS públicos</li>
+                    <li>Se desencripta localmente en tu navegador usando tu clave</li>
+                    <li>El archivo original se descarga a tu dispositivo</li>
+                </ol>
+            </div>
+
+            <div class="info-box">
+                <h3>🌐 Gateways IPFS Alternativos</h3>
+                <p>Si este kit no funciona, puedes acceder manualmente a través de:</p>
+                <div class="code-block">
+                    https://ipfs.io/ipfs/[TU_CID]<br>
+                    https://gateway.pinata.cloud/ipfs/[TU_CID]<br>
+                    https://4everland.io/ipfs/[TU_CID]<br>
+                    https://dweb.link/ipfs/[TU_CID]
+                </div>
+                <p style="margin-top: 10px;">
+                    <strong>Nota:</strong> Los archivos descargados estarán cifrados.
+                    Necesitarás usar una herramienta de descifrado AES-256-GCM con tu clave.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función principal de recuperación
+        async function recoverAllFiles() {
+            const ipfsHashesRaw = document.getElementById('ipfsHashes').value.trim();
+            const encryptionKey = document.getElementById('encryptionKey').value.trim();
+            const resultsContainer = document.getElementById('resultsContainer');
+            const spinner = document.getElementById('spinner');
+            const btn = document.getElementById('recoverBtn');
+
+            // Validaciones
+            if (!ipfsHashesRaw) {
+                alert('Por favor, ingresa al menos un identificador IPFS (CID)');
+                return;
+            }
+
+            const ipfsHashes = ipfsHashesRaw.split('\n')
+                .map(h => h.trim())
+                .filter(h => h.length > 0);
+
+            if (!encryptionKey) {
+                alert('Por favor, ingresa la clave de cifrado');
+                return;
+            }
+
+            // Validar que sea base64 válido
+            if (!/^[A-Za-z0-9+/]+=*$/.test(encryptionKey)) {
+                alert('La clave de cifrado debe estar en formato Base64 válido');
+                return;
+            }
+
+            // Limpiar resultados anteriores y mostrar spinner
+            resultsContainer.innerHTML = '';
+            spinner.style.display = 'block';
+            btn.disabled = true;
+
+            for (const cid of ipfsHashes) {
+                const resultId = 'result-' + Math.random().toString(36).substr(2, 9);
+                const resultDiv = document.createElement('div');
+                resultDiv.id = resultId;
+                resultDiv.className = 'result';
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = `<p>⏳ Procesando: ${cid}...</p>`;
+                resultsContainer.appendChild(resultDiv);
+
+                try {
+                    // 1. Descargar archivo cifrado desde IPFS
+                    const encryptedData = await downloadFromIPFS(cid);
+
+                    // 2. Desencriptar archivo
+                    const decryptedData = await decryptFile(encryptedData, encryptionKey);
+
+                    // 3. Determinar nombre y tipo de archivo
+                    const { fileName, mimeType } = detectFileInfo(decryptedData, cid);
+
+                    // 4. Crear blob y descargar
+                    const blob = new Blob([decryptedData], { type: mimeType });
+                    const url = URL.createObjectURL(blob);
+
+                    // Mostrar resultado exitoso
+                    updateSuccessResult(resultDiv, cid, fileName, blob.size, mimeType, url);
+
+                } catch (error) {
+                    updateErrorResult(resultDiv, cid, error.message);
+                }
+            }
+
+            spinner.style.display = 'none';
+            btn.disabled = false;
+        }
+
+        // Función para actualizar resultado de éxito
+        function updateSuccessResult(div, cid, fileName, size, mimeType, downloadUrl) {
+            div.className = 'result';
+            div.innerHTML = `
+                <h3 style="color: #2e7d32;">✅ CID Recuperado: ${cid.substring(0, 10)}...</h3>
+                <div class="file-info">
+                    <p><strong>CID:</strong> ${cid}</p>
+                    <p><strong>Nombre:</strong> ${fileName}</p>
+                    <p><strong>Tamaño:</strong> ${formatBytes(size)}</p>
+                    <p><strong>Tipo:</strong> ${mimeType}</p>
+                </div>
+                <a href="${downloadUrl}" download="${fileName}">
+                    <button class="btn download-btn">⬇️ Descargar Archivo</button>
+                </a>
+            `;
+        }
+
+        // Función para actualizar resultado de error
+        function updateErrorResult(div, cid, message) {
+            div.className = 'result error';
+            div.innerHTML = `
+                <h3>❌ Error con CID: ${cid.substring(0, 10)}...</h3>
+                <p><strong>CID:</strong> ${cid}</p>
+                <p>${message}</p>
+            `;
+        }
+
+        // Descargar archivo desde IPFS con múltiples gateways
+        async function downloadFromIPFS(cid) {
+            const gateways = [
+                `https://ipfs.io/ipfs/${cid}`,
+                `https://gateway.pinata.cloud/ipfs/${cid}`,
+                `https://4everland.io/ipfs/${cid}`,
+                `https://dweb.link/ipfs/${cid}`
+            ];
+
+            for (const gateway of gateways) {
+                try {
+                    console.log(`Intentando descargar desde: ${gateway}`);
+                    const response = await fetch(gateway, {
+                        method: 'GET',
+                        cache: 'no-cache'
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}`);
+                    }
+
+                    const arrayBuffer = await response.arrayBuffer();
+                    console.log(`✓ Descargado exitosamente desde ${gateway}`);
+                    return arrayBuffer;
+
+                } catch (error) {
+                    console.warn(`✗ Falló ${gateway}: ${error.message}`);
+                    continue;
+                }
+            }
+
+            throw new Error('No se pudo descargar el archivo desde ningún gateway IPFS. Verifica tu conexión a internet e intenta nuevamente.');
+        }
+
+        // Desencriptar archivo usando AES-256-GCM
+        async function decryptFile(encryptedData, base64Key) {
+            try {
+                // Convertir clave base64 a bytes
+                const keyBytes = base64ToBytes(base64Key);
+
+                // Importar clave para Web Crypto API
+                const cryptoKey = await crypto.subtle.importKey(
+                    'raw',
+                    keyBytes,
+                    { name: 'AES-GCM' },
+                    false,
+                    ['decrypt']
+                );
+
+                // El formato de EternalEncryptionUtils es: [12 bytes IV][16 bytes TAG][datos cifrados]
+                const dataView = new Uint8Array(encryptedData);
+                const ivLen = 12; // AES-GCM IV length
+                const tagLen = 16; // AES-GCM tag length
+
+                const iv = dataView.slice(0, ivLen);
+                const tag = dataView.slice(ivLen, ivLen + tagLen);
+                const ciphertext = dataView.slice(ivLen + tagLen);
+
+                // Concatenar ciphertext + tag para Web Crypto API
+                const ciphertextWithTag = new Uint8Array(ciphertext.length + tag.length);
+                ciphertextWithTag.set(ciphertext);
+                ciphertextWithTag.set(tag, ciphertext.length);
+
+                // Desencriptar
+                const decrypted = await crypto.subtle.decrypt(
+                    {
+                        name: 'AES-GCM',
+                        iv: iv,
+                        tagLength: 128
+                    },
+                    cryptoKey,
+                    ciphertextWithTag
+                );
+
+                return decrypted;
+
+            } catch (error) {
+                console.error('Decryption error:', error);
+                throw new Error('Error al desencriptar: Verifica que la clave de cifrado sea correcta');
+            }
+        }
+
+        // Convertir string base64 a bytes
+        function base64ToBytes(base64) {
+            const binaryString = atob(base64);
+            const bytes = new Uint8Array(binaryString.length);
+            for (let i = 0; i < binaryString.length; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return bytes;
+        }
+
+        // DEPRECATED: Mantener por compatibilidad pero no se usa
+        function hexToBytes(hex) {
+            const bytes = new Uint8Array(hex.length / 2);
+            for (let i = 0; i < hex.length; i += 2) {
+                bytes[i / 2] = parseInt(hex.substr(i, 2), 16);
+            }
+            return bytes;
+        }
+
+        // Detectar tipo MIME y extensión del archivo
+        function detectFileInfo(data, cid) {
+            const arr = new Uint8Array(data).subarray(0, 8);
+            let header = '';
+            for (let i = 0; i < arr.length; i++) {
+                header += arr[i].toString(16).padStart(2, '0');
+            }
+
+            let info = {
+                mime: 'application/octet-stream',
+                ext: 'file'
+            };
+
+            // Firmas de archivos comunes
+            if (header.startsWith('25504446')) {
+                info.mime = 'application/pdf';
+                info.ext = 'pdf';
+            } else if (header.startsWith('89504e47')) {
+                info.mime = 'image/png';
+                info.ext = 'png';
+            } else if (header.startsWith('ffd8ff')) {
+                info.mime = 'image/jpeg';
+                info.ext = 'jpg';
+            } else if (header.startsWith('504b0304')) {
+                // ZIP o formatos basados en ZIP (DOCX, XLSX, etc)
+                // Para ser precisos necesitaríamos leer más bytes, pero por defecto ponemos zip
+                info.mime = 'application/zip';
+                info.ext = 'zip';
+            } else if (header.startsWith('47494638')) {
+                info.mime = 'image/gif';
+                info.ext = 'gif';
+            } else if (header.startsWith('0000001866747970') || header.startsWith('0000002066747970')) {
+                info.mime = 'video/mp4';
+                info.ext = 'mp4';
+            } else if (header.startsWith('494433') || header.startsWith('fffb')) {
+                info.mime = 'audio/mpeg';
+                info.ext = 'mp3';
+            } else if (header.startsWith('25215053')) {
+                info.mime = 'application/postscript';
+                info.ext = 'ps';
+            } else if (header.startsWith('52617221')) {
+                info.mime = 'application/x-rar-compressed';
+                info.ext = 'rar';
+            } else if (header.startsWith('7b5c727466')) {
+                info.mime = 'application/rtf';
+                info.ext = 'rtf';
+            } else if (header.startsWith('efbbbf') || (arr[0] > 31 && arr[0] < 127)) {
+                // Probablemente texto
+                info.mime = 'text/plain';
+                info.ext = 'txt';
+            }
+
+            const fileName = `recovered_${cid.substring(0, 8)}.${info.ext}`;
+            return { fileName, mimeType: info.mime };
+        }
+
+        // DEPRECATED: Usar detectFileInfo
+        function detectMimeType(data) {
+            return detectFileInfo(data, '').mimeType;
+        }
+
+        // DEPRECATED: Usar detectFileInfo
+        function extractFileName(cid) {
+            return `recovered_${cid.substring(0, 8)}.file`;
+        }
+
+        // Formatear bytes a tamaño legible
+        function formatBytes(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+        }
+    </script>
+
+
+<style></style><div id="extension-pddjl"></div></body></html>
